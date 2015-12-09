@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: composer-php
-# Spec:: default
+# Spec:: install
 #
 # Copyright 2015 Steve Buzonas
 #
@@ -18,7 +18,7 @@
 
 require 'spec_helper'
 
-describe 'composer-php::default' do
+describe 'composer-php::install' do
   context 'When all attributes are default, on an unspecified platform' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new

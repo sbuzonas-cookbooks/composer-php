@@ -22,5 +22,5 @@ install_params = "--install-dir=#{node['composer']['install_dir']} --filename=#{
 install_params << " --version=#{node['composer']['version']}" unless node['composer']['version'].nil?
 
 execute 'install_composer' do
-  command %Q{php -r "readfile('https://getcomposer.org/installer');" | php -- #{install_params}}
+  command %{php -r "readfile('https://getcomposer.org/installer');" | php -- #{install_params}}
 end
